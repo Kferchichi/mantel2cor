@@ -20,7 +20,7 @@ mantel(fst.dist.matrix, gps.dist.matrix, permutations = 100000)
 #convert the gps matrix object into a non-distributed vector object
 gpsvec = as.vector(gps.dist.matrix)
 #create a dataframe with the two vectors objects
- df <- data.frame(x=gpsvec, y=fstvec, Population=c('pop1', 'pop2', 'pop3', 'pop4', 'pop5', 'pop6', 'pop7', 'pop8', 'pop9', 'pop10', 'pop11'))
+ df <- data.frame(x=gpsvec, y=fstvec)
 #plot the correlation scatter plot 
 library("ggplot2")
 ggplot(df, aes(y = fstvec, x = gpsvec/1000)) + 
